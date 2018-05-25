@@ -1,11 +1,11 @@
 <template>
   <div id="app">
     <!--头部-->
-    <app-header :poiInfo="poiInfo"></app-header>
+    <appHeader :poiInfo="poiInfo"></appHeader>
 
     <!--导航-->
     <div class="nav">
-      <app-nav></app-nav>
+      <appNav></appNav>
     </div>
 
     <!--内容-->
@@ -22,8 +22,8 @@
   export default{
     name: 'App',
     components: {
-      'app-header': Header,
-      'app-nav': Nav
+      'appHeader': Header,
+      'appNav': Nav
     },
     data(){
       return{
