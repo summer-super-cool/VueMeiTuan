@@ -98,12 +98,16 @@
 </template>
 
 <script>
+  import Star from '../star/Star';
 
   export default {
     data(){
       return {
         isShow:false
       }
+    },
+    components: {
+      'appStar': Star
     },
     props:{
       poiInfo:{
