@@ -73,8 +73,8 @@
       </ul>
     </div>
 
-    <!--&lt;!&ndash; 购物车 &ndash;&gt;-->
-    <!--<app-shopcart :poiInfo="poiInfo" :selectFoods="selectFoods"></app-shopcart>-->
+    <!-- 购物车 -->
+    <app-shopcart :poiInfo="poiInfo" :selectFoods="selectFoods"></app-shopcart>
 
     <!--&lt;!&ndash; 商品详情 &ndash;&gt;-->
     <!--<app-product-detail :food="selectFood" ref="foodView"></app-product-detail>-->
@@ -83,8 +83,8 @@
 
 <script>
 import BScroll from 'better-scroll'
-// import Shopcart from '../shopcart/Shopcart'
-// import CartControl from '../cartcontrol/CartControl'
+import Shopcart from '../shopcart/Shopcart'
+import CartControl from '../cartcontrol/CartControl'
 // import ProductDetail from '../productDetail/ProductDetail'
 export default {
   data(){
@@ -213,8 +213,8 @@ export default {
     }
   },
   components:{
-    // "app-shopcart":Shopcart,
-    // "app-cart-control":CartControl,
+    "app-shopcart":Shopcart,
+    "app-cart-control":CartControl,
     // "app-product-detail":ProductDetail
   }
 }
