@@ -5,7 +5,7 @@
 
     <!--导航-->
     <div class="nav">
-      <appNav></appNav>
+      <appNav :commentNum="commentNum"></appNav>
     </div>
 
     <!--内容-->
@@ -27,7 +27,8 @@
     },
     data(){
       return{
-        poiInfo:{}
+        poiInfo:{},
+        commentNum:0
       }
     },
     created(){
@@ -36,10 +37,18 @@
           return res.json()
         })
         .then(response =>{
-          // console.log(response)
           if(response.code == 0){
             this.poiInfo = response.data.poi_info
-            console.log(this.poiInfo)
+          }
+        })
+
+      fetch("/api/ratings")
+        .then(res => {
+          return res.json()
+        })
+        .then(response =>{
+          if(response.code == 0){
+            this.commentNum = response.data.comment_num
           }
         })
     }
