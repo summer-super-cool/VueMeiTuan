@@ -76,8 +76,8 @@
     <!-- 购物车 -->
     <app-shopcart :poiInfo="poiInfo" :selectFoods="selectFoods"></app-shopcart>
 
-    <!--&lt;!&ndash; 商品详情 &ndash;&gt;-->
-    <!--<app-product-detail :food="selectFood" ref="foodView"></app-product-detail>-->
+    <!-- 商品详情 -->
+    <app-product-detail :food="selectFood" ref="foodView"></app-product-detail>
   </div>
 </template>
 
@@ -85,7 +85,7 @@
 import BScroll from 'better-scroll'
 import Shopcart from '../shopcart/Shopcart'
 import CartControl from '../cartcontrol/CartControl'
-// import ProductDetail from '../productDetail/ProductDetail'
+import ProductDetail from '../productDetail/ProductDetail'
 export default {
   data(){
     return {
@@ -215,7 +215,7 @@ export default {
   components:{
     "app-shopcart":Shopcart,
     "app-cart-control":CartControl,
-    // "app-product-detail":ProductDetail
+    "app-product-detail":ProductDetail
   }
 }
 </script>
